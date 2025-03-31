@@ -4,7 +4,11 @@ import sqlite3
 import os
 import tempfile
 
-st.set_page_config(page_title="عبدالله چلاسی - طراح و برنامه نویس",page_icon="logo.png",layout="wide")
+st.set_page_config(
+    page_title="عبدالله چلاسی - طراح و برنامه نویس وبسایت",
+    page_icon="https://abdollahchelasi.ir/media/0ad2abce143d4937ae0e0fd8d88632394d6c622bd7b2df49de7ec8f9.png",
+    layout="wide"
+    )
 
 
 
@@ -186,9 +190,15 @@ if selected == "صفحه اصلی":
                 :red[طراحی سیستم رزرواسیون هتل]
                 و
                 :blue[طراحی سیستم نوبت دهی مطب پزشک یا بیمارستان]
+                و 
+                :green[طراحی سایت فروشگاه آنلاین]
 
                     """
                 )
+                st.markdown("[وبسایت رزرواسیون هتل](https://abdollah-hotell.hf.space)")
+                st.markdown("[وبسایت نوبت دهی مطب](https://abdollah-doctor.hf.space)")
+                st.markdown("[وبسایت فروشگاه آنلاین](https://hypersetare.liara.run)")
+                st.divider()
                 st.write("##")
                 st.write("##")
         
@@ -348,6 +358,38 @@ elif selected == "نمونه کار":
         col1 , col2 = st.columns(2)
 
     with col1:
+        with st.expander("رزرو نوبت دهی مطب",expanded=True):
+            st.image("doctor.png")
+            st.write("""
+رزرو نوبت دهی مطب بزشک یا بیمارستان
+""")
+            st.divider()
+            st.markdown("[وبسایت](https://abdollah-doctor.hf.space)")
+
+
+    with col1:
+        with st.expander("رزرواسیون هتل",expanded=True):
+            st.image("hotell.png")
+            st.write("""
+رزرو اتاق های هتل
+""")
+            st.divider()
+            st.markdown("[وبسایت](https://abdollah-hotell.hf.space)")
+
+
+
+    with col1:
+        with st.expander("فروشگاه آنلاین",expanded=True):
+            st.image("shopp.png")
+            st.write("""
+فروشگاه آنلاین خرید کنید
+""")
+            st.divider()
+            st.markdown("[وبسایت](https://hypersetare.liara.run/)")
+            st.markdown("[وبسایت](https://abdollah-shop.hf.space)")
+
+
+    with col2:
         with st.expander("هتل ساحل طلایی قشم",expanded=True):
             st.image("h.png")
             st.write("""
@@ -364,7 +406,7 @@ elif selected == "نمونه کار":
             st.markdown("[وبسایت](https://abdollah-hotel.hf.space)")
 
 
-    with col1:
+    with col2:
         with st.expander("موتور قایق مالک",expanded=True):
             st.image("motor.png")
             st.write("""
@@ -394,8 +436,7 @@ elif selected == "نمونه کار":
             
             # with c2:
             st.markdown("[اپلیکیشن](https://myket.ir/app/abdollah.digicode)")
-            st.divider()
-            
+            st.divider() 
             if st.text_input("") == "@":
                 st.markdown("[وبسایت](https://abdollah-digicode.hf.space)")
 
@@ -472,12 +513,7 @@ elif selected == "نمونه کار":
         col1,col2=st.columns((2))
 
         
-        with col1:
-            with st.expander(" فروشگاه دیجی کد " ,expanded=True):
-                st.image("dig.png")
-                st.write("""
-                         فروشگاه آموزشی دیجی کد با کلی سورس های آماده و اینکه بتونم با کدهای کمتری یک برنامه کامل بسازم و اینکه سعی میکنم کسانی که برنامه نویسی بلد نیستن و علاقه دارن همچین پروژه هایی بسازن و نمیخوان خیلی درگیر برنامه نویسی باشن پروژه هایی که با علامت ✨ روی پروژه ها برچسب زده شده رو اینجور پروژه ها برنامه های کامل زده شده و کد کمتری دارن
-                         """)
+
                 # st.markdown("[دیجی کد](https://digicode.streamlit.app/)")
         
         with col2:
